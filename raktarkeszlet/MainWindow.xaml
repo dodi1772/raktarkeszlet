@@ -1,0 +1,43 @@
+﻿<Window x:Class="raktarkeszlet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:raktarkeszlet"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="830">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="auto"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="0" Margin="0,10,0,0">
+			<WrapPanel>
+				<TextBlock>Termék neve:</TextBlock>
+				<TextBox x:Name="termekMezo" Width="100" Margin="10,0,0,0"></TextBox>
+				<TextBlock Margin="10,0,0,0">Egységár:</TextBlock>
+				<TextBox x:Name="egysegMezo" Width="50" Margin="10,0,0,0"></TextBox>
+				<TextBlock Margin="10,0,0,0">Darabszám:</TextBlock>
+				<TextBox x:Name="darabMezo" Width="50" Margin="10,0,0,0"></TextBox>
+				<Button Width="150" Margin="30,0,0,0" Click="HozzaadClick">Hozzáadás</Button>
+				<Button Width="150" Margin="30,0,0,0" Click="TorlesClick">Törlés</Button>
+			</WrapPanel>
+		</StackPanel>
+		<StackPanel Grid.Row="1" Margin="0,10,0,0">
+			<WrapPanel Margin="0,10,0,0">
+				<TextBlock>Raktárkészlet lista</TextBlock>
+			</WrapPanel>
+			<ListBox Height="350" Margin="0,5,0,0" x:Name="keszletLista">
+
+			</ListBox>
+		</StackPanel>
+		<StackPanel Grid.Row="2">
+			<WrapPanel>
+				<Label>Összes termék darabszáma:</Label>
+				<Label x:Name="osszdarab">0</Label>
+			</WrapPanel>
+		</StackPanel>
+	</Grid>
+</Window>
