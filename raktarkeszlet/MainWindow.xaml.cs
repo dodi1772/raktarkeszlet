@@ -40,6 +40,12 @@ namespace raktarkeszlet
 					MezoTorles();
 					return;
 				}
+				else if (darab <= 0 || darab1 <= 0)
+				{
+					MessageBox.Show("Hiba: Az egység/darab számának 0-nál nagyobbnak kell lennie.", "Érvénytelen szám", MessageBoxButton.OK, MessageBoxImage.Error);
+					MezoTorles();
+					return;
+				}
 				else
 				{
 					darabszam = int.Parse(darabMezo.Text);
