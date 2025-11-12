@@ -37,6 +37,8 @@
 			<WrapPanel>
 				<Label>Összes termék darabszáma:</Label>
 				<Label x:Name="osszdarab">0</Label>
+				<Button Content="Mentés fájlba" Click="MentesFajlbaClick" Margin="5"/>
+				<Button Content="Betöltés fájlból" Click="BetoltesFajlbolClick" Margin="5"/>
 			</WrapPanel>
 		</StackPanel>
 	</Grid>
